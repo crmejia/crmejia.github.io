@@ -1,0 +1,24 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Crismar Mejia personal site'
+
+theme = "paper"
+
+[params]
+  # color style
+  color = 'linen'                 # linen, wheat, gray, light
+
+  # header social icons
+  twitter = 'CrismarMOz'     # twitter.com/YOUR_TWITTER_ID
+  github = 'crmejia'       # github.com/YOUR_GITHUB_ID
+  rss = true                      # show rss icon with link
+
+  # home page profile
+  avatar = 'GRAVATAR_EMAIL'       # Gravatar email or image url(e.g. "https://deno.land/logo.svg")
+  name = 'YOUR_NAME'
+  bio = 'YOUR_BIO'
+
+  # misc
+  disableHLJS = true              # disable requesting highlight.js
+  monoDarkIcon = true             # show monochrome dark mode icon
+
