@@ -28,7 +28,6 @@ I picked up kubeadm and build a bare metal Kubernetes cluster. I wrote a guide a
 > 
 > — Crismar Mejia (@CrismarMOz) [September 30, 2017](https://twitter.com/CrismarMOz/status/914219256014884865?ref_src=twsrc%5Etfw)
 
-<script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
 
 I learned so much on this project:
 
@@ -39,8 +38,6 @@ I learned so much on this project:
 > Voilà ! [pic.twitter.com/4QJ4AFwUzP](https://t.co/4QJ4AFwUzP)
 > 
 > — Crismar Mejia (@CrismarMOz) [October 9, 2017](https://twitter.com/CrismarMOz/status/917228706946576384?ref_src=twsrc%5Etfw)
-
-<script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
 
 
 ## Kubernetes API

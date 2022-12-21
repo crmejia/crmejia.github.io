@@ -10,14 +10,11 @@ title = "January & February '18: ReactiveOps, Career Goals, PyCaribbean"
 
 +++
 
-
 Long time no see. I’ve kept busy and also got great news. On the 5th of February, I started a job as a Site Reliability Engineer for ReactiveOps. I’m excited and grateful for this opportunity.
 
 > Today is my first day as a Site Reliability Engineer for [@ReactiveOps](https://twitter.com/ReactiveOps?ref_src=twsrc%5Etfw) Very excited to be working with great people on Kubernetes!
 > 
 > — Crismar Mejia (@CrismarMOz) [February 5, 2018](https://twitter.com/CrismarMOz/status/960543277501046785?ref_src=twsrc%5Etfw)
-
-<script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
 
 Getting a job in the area was one of my career goals for this year. My other goals for the year are:
 

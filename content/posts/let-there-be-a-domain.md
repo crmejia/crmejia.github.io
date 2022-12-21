@@ -10,7 +10,6 @@ title = "Let There be a Domain"
 
 +++
 
-
 Now that the blog is back up finally we can finally get around to setting up a domain. First thing we would need is a static IP to point the domain to. So let’s do.
 
 ### Static IP on GKE for a Kubernetes Service
@@ -91,4 +90,3 @@ Setting up a domain proved easier than I expected. However, fixing the blog afte
 #### What’s next
 
 For the next mini-project, I might set up a certificate for the site provided by let’s encrypt to enable https. Also, I’m thinking about setting up a monitoring and/or log solution other than kubernetes-ui dashboard to keep learning. Or I might setup a new cluster following one of the other examples in the repo. Stay tuned!
-

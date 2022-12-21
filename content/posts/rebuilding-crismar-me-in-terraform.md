@@ -5,7 +5,7 @@ description = ""
 draft = false
 slug = "rebuilding-crismar-me-in-terraform"
 title = "Rebuilding crismar.me in Terraform"
-
+tags = ["Digital Ocean", "Terraform", "Ghost", "nginx"]
 +++
 
 

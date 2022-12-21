@@ -1,24 +1,17 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://crismar.me/'
 languageCode = 'en-us'
-title = 'Crismar Mejia personal site'
+title = 'Crismar.Me'
 
-theme = "paper"
+theme = "paperesque"
 
-[params]
-  # color style
-  color = 'linen'                 # linen, wheat, gray, light
+[[params.topmenu]]
+  name = "about"
+  url = "about/"
 
-  # header social icons
-  twitter = 'CrismarMOz'     # twitter.com/YOUR_TWITTER_ID
-  github = 'crmejia'       # github.com/YOUR_GITHUB_ID
-  rss = true                      # show rss icon with link
+[[params.topmenu]]
+  name = "blog"
+  url = "posts/"
 
-  # home page profile
-  avatar = 'GRAVATAR_EMAIL'       # Gravatar email or image url(e.g. "https://deno.land/logo.svg")
-  name = 'YOUR_NAME'
-  bio = 'YOUR_BIO'
-
-  # misc
-  disableHLJS = true              # disable requesting highlight.js
-  monoDarkIcon = true             # show monochrome dark mode icon
-
+[[params.topmenu]]
+  name = "consulting"
+  url = "consulting/"

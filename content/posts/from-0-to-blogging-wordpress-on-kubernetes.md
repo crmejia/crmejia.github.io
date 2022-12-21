@@ -10,14 +10,13 @@ title = "From 0 to Blogging: WordPress on Kubernetes"
 
 +++
 
-
 I want to become a SRE/Distributed Systems Engineer. An expert in the field suggested I started small by setting up a WordPress blog using Kubernetes + Docker on a local machine or a cloud like a droplet from Digital Ocean or GKE from Google. So this is my journey setting up a blog.
 
-#### Udacity 615: Scalable Microservices with Kubernetes
+## Udacity 615: Scalable Microservices with Kubernetes
 
 I was debating where to start since I wasn’t familiar with Kubernetes or Docker. Luckily, I found a course on Udacity called Scalable Microservices with Kubernetes it took me around 5 nights to complete it. It’s a good course that gives a high level overview on how these technologies are put together and what they’re trying to solve, building scalable web apps. 
 
-#### Local Setup with Docker for MAC
+## Local Setup with Docker for MAC
 
 To continue on my journey, I decided to forgo the cluster part and just familiarize myself with docker. Here’s a how to.
 
@@ -49,7 +48,7 @@ Your blog is live at localhost:8080!
 
 Now stop the containers with : `$docker stop wp_demo && docker stop_wp_db`
 
-#### Minikube Setup
+## Minikube Setup
 
 Now that we were able to get WordPress working locally is time to set it up in a Kubernetes cluster. Once again I decided to start small and set up Minikube by following this [guide](https://kubernetes.io/docs/getting-started-guides/minikube/#installation). Minikube is a tool to run a single node-cluster locally.  Minikube needs a vm to set up the cluster I’ve decided to go with xhyve as is more lightweight and already part of Docker for Mac. When done installing start the cluster with: `$minikube start --vm-driver=xhyve`
 
@@ -67,7 +66,7 @@ After find the service url with  minikube service wordpress –url
 
 You should be able to curl the url or use your browser. 
 
-#### Google Container Engine(GKE)
+## Google Container Engine(GKE)
 
 FinalIy time to go big, I’m going to set up a k8s cluster on Google Cloud. However, this time I’m going to implement secrets to save the passwords and persistent volumes to allow the blog to persist.
 
@@ -119,7 +118,6 @@ The guide warns against leaving the installation page live. Either set up the bl
 
 In my case, I’m going to set up the blog and post.
 
-#### Conclusion
+## Conclusion
 
 In this post we walked through setting up this very WordPress blog using Docker and Kubernetes. It just occurred to me to do a 2nd part, in this I’m going to break the bank and set up a domain(and come up with a cool name for the blog or just my name). Also, I’ve noticed that there is a newer version of WordPress so I’m going to be upgrading that too!
-

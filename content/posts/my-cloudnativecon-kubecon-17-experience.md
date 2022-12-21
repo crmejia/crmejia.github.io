@@ -10,14 +10,11 @@ title = "My CloudNativeCon + KubeCon '17 Experience"
 
 +++
 
-
 I was awarded a diversity scholarship to go to CloudNativeCon + Kubecon in Austin. I was selected in the second round, only 30 scholarships were offered at first. However, thanks to the efforts of the diversity committee they were able to offer 73 more scholarships. I’m very grateful for the diligence of these ladies to extend this amazing opportunity to more people.
 
 > 103 attendees here this week received diversity scholarships! This is the largest investment in diversity for ANY conference EVER — thanks to this incredible committee, [@googlecloud](https://twitter.com/googlecloud?ref_src=twsrc%5Etfw), [@Azure](https://twitter.com/Azure?ref_src=twsrc%5Etfw), [@awscloud](https://twitter.com/awscloud?ref_src=twsrc%5Etfw) & [@twistlockteam](https://twitter.com/twistlockteam?ref_src=twsrc%5Etfw) 👏🏼 [LIVE from [#KubeCon](https://twitter.com/hashtag/KubeCon?src=hash&ref_src=twsrc%5Etfw) + [#CloudNativeCon](https://twitter.com/hashtag/CloudNativeCon?src=hash&ref_src=twsrc%5Etfw)] [pic.twitter.com/GtxNCjb1g5](https://t.co/GtxNCjb1g5)
 > 
 > — CNCF (@CloudNativeFdn) [December 6, 2017](https://twitter.com/CloudNativeFdn/status/938435795022745600?ref_src=twsrc%5Etfw)
-
-<script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
 
 ### Community
 
@@ -33,10 +30,10 @@ I attended the lightning talks to see Nikhita’s talk about contributing to k8s
 
 ### Austin, TX, Winter Wonderland
 
-![](__GHOST_URL__/content/images/2017/12/snow-225x300.jpg)  
+  
  Sooooo, it snowed in Austin. Not my first time seeing snow, but I’ve been living in the Dominican Republic for the past 4 years, so my body was definitely not ready for it!
 
-<figure class="wp-caption aligncenter" id="attachment_226" style="width: 225px">![](https://crismar.me/content/images/2017/12/bbq-225x300.jpg)<figcaption class="wp-caption-text">This time around I got me some Texas BBQ at Cooper’s.</figcaption></figure><figure class="wp-caption aligncenter" id="attachment_225" style="width: 225px">![](https://crismar.me/content/images/2017/12/graffiti-225x300.jpg)<figcaption class="wp-caption-text">Also had the chance to visit Graffiti Park.</figcaption></figure>### Conclusion
+### Conclusion
 
 This conference has been a great step in my career. I was able to learn a lot about cloud and k8s, grow my network, and have a better idea of what I need to learn next to keep growing. I hope I can repeat it sometime in the future, maybe even put together a talk to share my own knowledge and experience.
 
