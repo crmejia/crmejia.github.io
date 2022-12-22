@@ -1,0 +1,158 @@
+<!doctype html><html lang=en-us prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+<meta charset=utf-8>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<meta name=HandheldFriendly content="True">
+<meta name=MobileOptimized content="320">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=apple-touch-icon sizes=180x180 href=https://crmejia.github.io/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://crmejia.github.io/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://crmejia.github.io/favicon-16x16.png>
+<link rel=manifest href=https://crmejia.github.io/site.webmanifest>
+<link rel=mask-icon href=https://crmejia.github.io/safari-pinned-tab.svg color=#5bbad5>
+<meta name=msapplication-TileColor content="#da532c">
+<meta name=theme-color content="#ffffff">
+<meta name=keywords content="Docker,
+GCP,
+Kubernetes,
+WordPress,
+">
+<meta property="og:title" content="From 0 to Blogging: WordPress on Kubernetes">
+<meta property="og:description" content="I want to become a SRE/Distributed Systems Engineer. An expert in the field suggested I started small by setting up a WordPress blog using Kubernetes + Docker on a local machine or a cloud like a droplet from Digital Ocean or GKE from Google. So this is my journey setting up a blog.
+Udacity 615: Scalable Microservices with Kubernetes I was debating where to start since I wasn’t familiar with Kubernetes or Docker.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://crmejia.github.io/posts/from-0-to-blogging-wordpress-on-kubernetes/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2017-04-16T22:50:28+00:00">
+<meta property="article:modified_time" content="2017-04-16T22:50:28+00:00">
+<meta property="og:site_name" content="Crismar.Me">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="From 0 to Blogging: WordPress on Kubernetes">
+<meta name=twitter:description content="I want to become a SRE/Distributed Systems Engineer. An expert in the field suggested I started small by setting up a WordPress blog using Kubernetes + Docker on a local machine or a cloud like a droplet from Digital Ocean or GKE from Google. So this is my journey setting up a blog.
+Udacity 615: Scalable Microservices with Kubernetes I was debating where to start since I wasn’t familiar with Kubernetes or Docker.">
+<meta itemprop=name content="From 0 to Blogging: WordPress on Kubernetes">
+<meta itemprop=description content="I want to become a SRE/Distributed Systems Engineer. An expert in the field suggested I started small by setting up a WordPress blog using Kubernetes + Docker on a local machine or a cloud like a droplet from Digital Ocean or GKE from Google. So this is my journey setting up a blog.
+Udacity 615: Scalable Microservices with Kubernetes I was debating where to start since I wasn’t familiar with Kubernetes or Docker."><meta itemprop=datePublished content="2017-04-16T22:50:28+00:00">
+<meta itemprop=dateModified content="2017-04-16T22:50:28+00:00">
+<meta itemprop=wordCount content="941">
+<meta itemprop=keywords content="Docker,GCP,Kubernetes,WordPress,">
+<title>From 0 to Blogging: WordPress on Kubernetes || Crismar.Me</title>
+<link rel=canonical href=https://crmejia.github.io/posts/from-0-to-blogging-wordpress-on-kubernetes/>
+<link rel=stylesheet href=/css/reboot.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/syntax.css>
+<script type=text/javascript src=/js/main.js></script>
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel=stylesheet>
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<link rel=apple-touch-icon href=/apple-touch-icon.png>
+</head>
+<body class=look-sheet-bkg lang=en-us>
+<div class="navbar nav-bkg drop-shadow">
+<nav class="content-container pagewide-bar-padding">
+<span class=divider>/ </span>
+<a href=/>Crismar.Me</a>
+<span class=divider>/ </span>
+<a href=/posts/>Posts</a>
+<ul class="list-unstyled right-links">
+<li>
+<a href=/about/>
+<span class=post-title>about</span>
+</a>
+</li>
+<li>
+<a href=/posts/>
+<span class=post-title>blog</span>
+</a>
+</li>
+<li>
+<a href=/consulting/>
+<span class=post-title>consulting</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<article id=main class="content-container look-sheet article-pad-v" itemscope itemtype=https://schema.org/Article>
+<meta itemprop=author content>
+<meta itemprop=publisher content>
+<meta itemprop=image content>
+<h1 itemprop=name id=title>From 0 to Blogging: WordPress on Kubernetes</h1>
+<meta itemprop=headline content="From 0 to Blogging: WordPress on Kubernetes">
+<div class=post-tags>
+<a href=https://crmejia.github.io/tags/docker/>#Docker</a>&nbsp;
+<a href=https://crmejia.github.io/tags/gcp/>#GCP</a>&nbsp;
+<a href=https://crmejia.github.io/tags/kubernetes/>#Kubernetes</a>&nbsp;
+<a href=https://crmejia.github.io/tags/wordpress/>#WordPress</a>&nbsp;
+</div>
+<div class=post-date><span itemprop=datePublished>April 16, 2017</span></div>
+<meta itemprop=dateModified content="April 16, 2017">
+<div itemprop=articleBody id=content class="article-body margin-top-2em">
+<p>I want to become a SRE/Distributed Systems Engineer. An expert in the field suggested I started small by setting up a WordPress blog using Kubernetes + Docker on a local machine or a cloud like a droplet from Digital Ocean or GKE from Google. So this is my journey setting up a blog.</p>
+<h2 id=udacity-615-scalable-microservices-with-kubernetes>Udacity 615: Scalable Microservices with Kubernetes</h2>
+<p>I was debating where to start since I wasn’t familiar with Kubernetes or Docker. Luckily, I found a course on Udacity called Scalable Microservices with Kubernetes it took me around 5 nights to complete it. It’s a good course that gives a high level overview on how these technologies are put together and what they’re trying to solve, building scalable web apps.</p>
+<h2 id=local-setup-with-docker-for-mac>Local Setup with Docker for MAC</h2>
+<p>To continue on my journey, I decided to forgo the cluster part and just familiarize myself with docker. Here’s a how to.</p>
+<p>Install Docker for Mac using these <a href=https://docs.docker.com/docker-for-mac/>instructions</a>. If you are running linux or windows you can also install docker on your system.</p>
+<p>Once you got docker installed open up a terminal and pull the images:</p>
+<p><code>$docker pull mysql</code></p>
+<p><code>$docker pull wordpress</code></p>
+<p>Following the instructions on the<a href=https://hub.docker.com/_/mysql/> mysql image </a>and <a href=https://hub.docker.com/_/mysql/>WordPress image</a> get the DB server going(in a container) with:</p>
+<p><code>$docker run --name wp_db -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql</code></p>
+<p>Then get the WordPress going with:</p>
+<p><code>$docker run --name wp_demo --link wp_db:mysql -e WORDPRESS_DB_PASSWORD=my-secret-pw -p 8080:80 -d wordpress</code></p>
+<p>Notice the link to the mysql container with the option <code>--link wp_db``.</code> If you run: <code>$docker ps</code></p>
+<p>You should see both containers running.</p>
+<pre tabindex=0><code>CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+b741bf4c23cc        wordpress           &quot;docker-entrypoint...&quot;   9 days ago          Up 42 seconds       0.0.0.0:8080-&gt;80/tcp   wp_demo
+68d3739555af        mysql               &quot;docker-entrypoint...&quot;   9 days ago          Up 54 seconds       3306/tcp               wp_db
+</code></pre><p>Your blog is live at localhost:8080!</p>
+<p>Now stop the containers with : <code>$docker stop wp_demo && docker stop_wp_db</code></p>
+<h2 id=minikube-setup>Minikube Setup</h2>
+<p>Now that we were able to get WordPress working locally is time to set it up in a Kubernetes cluster. Once again I decided to start small and set up Minikube by following this <a href=https://kubernetes.io/docs/getting-started-guides/minikube/#installation>guide</a>. Minikube is a tool to run a single node-cluster locally.  Minikube needs a vm to set up the cluster I’ve decided to go with xhyve as is more lightweight and already part of Docker for Mac. When done installing start the cluster with: <code>$minikube start --vm-driver=xhyve</code></p>
+<p>I found a <a href=https://github.com/kubernetes/kubernetes/tree/release-1.6/examples/mysql-wordpress-pd>guide</a> in the kubernetes github repo for setting up WordPress + MySQL on a cluster. Following that example, without the persistent storage and without secrets for simplicity. I created two manifest that can be found <a href=https://github.com/crmejia/blog_sample>here</a> one for a MySQL  deployment and one for WordPress.</p>
+<p>From your working directory you can clone the repo or directly use the url to the files(raw). I chose the former: Create both deployments with:</p>
+<p><code>$kubectl create -f mysql-deployment.yaml</code></p>
+<p><code>$kubectl create -f wordpress-deployment.yaml</code></p>
+<p>Check both pods are running with kubectl get pods</p>
+<p>After find the service url with  minikube service wordpress –url</p>
+<p>You should be able to curl the url or use your browser. </p>
+<h2 id=google-container-enginegke>Google Container Engine(GKE)</h2>
+<p>FinalIy time to go big, I’m going to set up a k8s cluster on Google Cloud. However, this time I’m going to implement secrets to save the passwords and persistent volumes to allow the blog to persist.</p>
+<p>First step, is to sign up for a Google Account to start using the Google Container Engine(GKE). I chose Google Cloud because they’ve extended their trial period for a whole year recently. Also, they have a free tier(3 node cluster) which enough for this project. Once you have access to the cloud, create a project and call it *blog. *Once you are in the project dashboard go to the <em>API Manager</em> and enable the Google Container API. Then start the cloud shell and run the following commands:</p>
+<p><code>$gcloud config set compute/zone us-east1-b</code></p>
+<p><code>$gcloud container clusters create k0</code></p>
+<p>First commands sets the time zone. The second, creates a default cluster with 3 nodes. Yes, as simple as that! By the way you can check all the zones available by running: $gcloud compute zones list</p>
+<p>Now we need to create the GCE persistent disks. One for WordPress and one for MySQL. Run:</p>
+<p><code>$gcloud compute disks create --size=20gb --zone=us-east1-b wordpress-1</code></p>
+<p><code>$gcloud compute disks create --size=20gb --zone=us-east1-b wordpress-2</code></p>
+<p>And following the guide, we create persistent volume objects in our cluster for these disks. Notice how we are using the repo file(raw) instead of cloning the whole kubernetes repo.</p>
+<p><code>$export KUBE_REPO=https://raw.githubusercontent.com/kubernetes/kubernetes/master</code></p>
+<p><code>$kubectl create -f $KUBE_REPO/examples/mysql-wordpress-pd/gce-volumes.yaml</code></p>
+<p>Now, let’s create the secret. First create a file with your password.</p>
+<p><code>$echo ‘&lt;YOUR-PASSWORD>’ > password.txt</code></p>
+<p>Then remove any trailing newline(\n) and create the secret as per the guide.</p>
+<p><code>$tr --delete '\n' &lt;password.txt>.strippedpassword.txt && mv.strippedpassword.txt password.txt</code></p>
+<p><code>$kubectl create secret generic mysql-pass --from-file=password.txt</code></p>
+<p>Now let’s deploy mysql, as per the guide:</p>
+<p><code>$kubectl create -f $KUBE_REPO/examples/mysql-wordpress-pd/mysql-deployment.yaml</code></p>
+<p>After a brief period the pod should be up and running: <code>$kubectl get pods</code></p>
+<pre tabindex=0><code>NAME                 READY     STATUS    RESTARTS   AGE 
+wordpress-mysql-2569670970-4pzw0   1/1       Running   0    11m
+</code></pre><p>And finally: <code>$kubectl get services wordpress</code></p>
+<p>Gets us the external IP where we can find our blog!</p>
+<p>The guide warns against leaving the installation page live. Either set up the blog completely, delete the instance or set up a firewall.</p>
+<p>In my case, I’m going to set up the blog and post.</p>
+<h2 id=conclusion>Conclusion</h2>
+<p>In this post we walked through setting up this very WordPress blog using Docker and Kubernetes. It just occurred to me to do a 2nd part, in this I’m going to break the bank and set up a domain(and come up with a cool name for the blog or just my name). Also, I’ve noticed that there is a newer version of WordPress so I’m going to be upgrading that too!</p>
+</div>
+</article>
+<div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75 drop-shadow">
+<nav class=flex-row>
+<span class="flex-row v-center"></span>
+<a href=https://crmejia.github.io/posts/blog-day-1-site-unavailable/ class="flex-row v-center no-underline" style=max-width:45%>
+<span class=re-underline>Next: Blog Day 1. Site Unavailable!?</span>&nbsp;<span class=text-1p5>→</span>
+</a>
+</nav>
+</div>
+</body>
+</html>

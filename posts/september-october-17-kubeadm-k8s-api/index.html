@@ -1,0 +1,133 @@
+<!doctype html><html lang=en-us prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+<meta charset=utf-8>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<meta name=HandheldFriendly content="True">
+<meta name=MobileOptimized content="320">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=apple-touch-icon sizes=180x180 href=https://crmejia.github.io/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://crmejia.github.io/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://crmejia.github.io/favicon-16x16.png>
+<link rel=manifest href=https://crmejia.github.io/site.webmanifest>
+<link rel=mask-icon href=https://crmejia.github.io/safari-pinned-tab.svg color=#5bbad5>
+<meta name=msapplication-TileColor content="#da532c">
+<meta name=theme-color content="#ffffff">
+<meta name=keywords content="kubeadm,
+Kubernetes,
+">
+<meta property="og:title" content="September & October '17: kubeadm, K8s API, VIM, and a little Housekeeping">
+<meta property="og:description" content="I’m trying a new approach for my documenting process. Namely:
+ Shorter posts on the blog. More tweets to share more of the day-to-day. Walkthrough guides will now be versioned(as they should) on GitHub.  Without further ado here’s what I’ve been up to:
+Bare Metal & kubeadm I picked up kubeadm and build a bare metal Kubernetes cluster. I wrote a guide about it, you can find it on GitHub.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://crmejia.github.io/posts/september-october-17-kubeadm-k8s-api/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2017-10-16T19:33:21+00:00">
+<meta property="article:modified_time" content="2017-10-16T19:33:21+00:00">
+<meta property="og:site_name" content="Crismar.Me">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="September & October '17: kubeadm, K8s API, VIM, and a little Housekeeping">
+<meta name=twitter:description content="I’m trying a new approach for my documenting process. Namely:
+ Shorter posts on the blog. More tweets to share more of the day-to-day. Walkthrough guides will now be versioned(as they should) on GitHub.  Without further ado here’s what I’ve been up to:
+Bare Metal & kubeadm I picked up kubeadm and build a bare metal Kubernetes cluster. I wrote a guide about it, you can find it on GitHub.">
+<meta itemprop=name content="September & October '17: kubeadm, K8s API, VIM, and a little Housekeeping">
+<meta itemprop=description content="I’m trying a new approach for my documenting process. Namely:
+ Shorter posts on the blog. More tweets to share more of the day-to-day. Walkthrough guides will now be versioned(as they should) on GitHub.  Without further ado here’s what I’ve been up to:
+Bare Metal & kubeadm I picked up kubeadm and build a bare metal Kubernetes cluster. I wrote a guide about it, you can find it on GitHub."><meta itemprop=datePublished content="2017-10-16T19:33:21+00:00">
+<meta itemprop=dateModified content="2017-10-16T19:33:21+00:00">
+<meta itemprop=wordCount content="337">
+<meta itemprop=keywords content="kubeadm,Kubernetes,">
+<title>September & October '17: kubeadm, K8s API, VIM, and a little Housekeeping || Crismar.Me</title>
+<link rel=canonical href=https://crmejia.github.io/posts/september-october-17-kubeadm-k8s-api/>
+<link rel=stylesheet href=/css/reboot.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/syntax.css>
+<script type=text/javascript src=/js/main.js></script>
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel=stylesheet>
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<link rel=apple-touch-icon href=/apple-touch-icon.png>
+</head>
+<body class=look-sheet-bkg lang=en-us>
+<div class="navbar nav-bkg drop-shadow">
+<nav class="content-container pagewide-bar-padding">
+<span class=divider>/ </span>
+<a href=/>Crismar.Me</a>
+<span class=divider>/ </span>
+<a href=/posts/>Posts</a>
+<ul class="list-unstyled right-links">
+<li>
+<a href=/about/>
+<span class=post-title>about</span>
+</a>
+</li>
+<li>
+<a href=/posts/>
+<span class=post-title>blog</span>
+</a>
+</li>
+<li>
+<a href=/consulting/>
+<span class=post-title>consulting</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<article id=main class="content-container look-sheet article-pad-v" itemscope itemtype=https://schema.org/Article>
+<meta itemprop=author content>
+<meta itemprop=publisher content>
+<meta itemprop=image content>
+<h1 itemprop=name id=title>September & October '17: kubeadm, K8s API, VIM, and a little Housekeeping</h1>
+<meta itemprop=headline content="September & October '17: kubeadm, K8s API, VIM, and a little Housekeeping">
+<div class=post-tags>
+<a href=https://crmejia.github.io/tags/kubeadm/>#kubeadm</a>&nbsp;
+<a href=https://crmejia.github.io/tags/kubernetes/>#Kubernetes</a>&nbsp;
+</div>
+<div class=post-date><span itemprop=datePublished>October 16, 2017</span></div>
+<meta itemprop=dateModified content="October 16, 2017">
+<div itemprop=articleBody id=content class="article-body margin-top-2em">
+<p>I’m trying a new approach for my documenting process. Namely:</p>
+<ul>
+<li>Shorter posts on the blog.</li>
+<li>More tweets to share more of the day-to-day.</li>
+<li>Walkthrough guides will now be versioned(as they should) on GitHub.</li>
+</ul>
+<p>Without further ado here’s what I’ve been up to:</p>
+<h2 id=bare-metal-kubeadm>Bare Metal & kubeadm</h2>
+<p>I picked up kubeadm and build a bare metal Kubernetes cluster. I wrote a guide about it, you can find it on <a href=https://github.com/crmejia/kubeadm-centos7-bare-metal>GitHub</a>.</p>
+<blockquote>
+<p>I got 3 x Dell Optiplex 380: Pentium Dual-Core 2.6Ghz 2GB RAM 160GB HDD and I’m going to install Centos 7 as the host <a href=https://t.co/ZFEyOOSVfS>pic.twitter.com/ZFEyOOSVfS</a></p>
+<p>— Crismar Mejia (@CrismarMOz) <a href="https://twitter.com/CrismarMOz/status/914219256014884865?ref_src=twsrc%5Etfw">September 30, 2017</a></p>
+</blockquote>
+<p>I learned so much on this project:</p>
+<ul>
+<li>I realized that building a cluster is not trivial(yet).</li>
+<li>There are many tradeoffs to make.</li>
+<li>Improved my Kubernetes debugging skills since I had to look at the kubelet, docker, pods, nodes, etc.</li>
+</ul>
+<blockquote>
+<p>Voilà ! <a href=https://t.co/4QJ4AFwUzP>pic.twitter.com/4QJ4AFwUzP</a></p>
+<p>— Crismar Mejia (@CrismarMOz) <a href="https://twitter.com/CrismarMOz/status/917228706946576384?ref_src=twsrc%5Etfw">October 9, 2017</a></p>
+</blockquote>
+<h2 id=kubernetes-api>Kubernetes API</h2>
+<p>I’m working on a ticket for service catalog that requires that I have a deeper understanding of k8s architecture and APIs. So, I took some time to reread and comprehend the <a href=https://kubernetes.io/docs/concepts/>concepts</a> and <a href=https://github.com/kubernetes/community/blob/master/contributors/devel/api-conventions.md>API conventions</a>. Similarly, I’ve been looking at the build process for both k8s and service catalog.</p>
+<h2 id=housekeeping>Housekeeping</h2>
+<p>Perhaps you’ve noticed some changes in the blog. There is a new theme and the coffee beans header is gone. My domain now points to the (shorter)bio and I set up a simple email forwarding following this <a href=https://www.bersling.com/2017/07/11/forwarding-mail-with-ec2-ubuntu-and-elasticip/>guide</a>. This is part of my commitment to keep documenting. I plan to keep adding features and styling as time goes on.</p>
+<h2 id=vim>VIM</h2>
+<p>I’m also learning VIM. Two months ago, I taught myself how to touch type with gtypist as part of the process to learn VIM properly. Now I’m picking up VIM using vimtutor and following advice from this <a href=https://dev.to/peterfication/finally-switching-to-vim>guide</a>.</p>
+<h2 id=conclusion>Conclusion</h2>
+<p>Busy month. For the near future, I want to explore Helm and Prometheus on my new cluster. Also, I plan to keep contributing to the Kubernetes project and learning VIM. Catch you on the next one!</p>
+</div>
+</article>
+<div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75 drop-shadow">
+<nav class=flex-row>
+<a href=https://crmejia.github.io/posts/my-hashiconf-17-experience/ class="flex-row v-center no-underline" style=max-width:45%>
+<span class=text-1p5>←</span>&nbsp;<span class=re-underline>Previous: My Hashiconf '17 Experience</span>
+</a>
+<a href=https://crmejia.github.io/posts/latter_half_oct17/ class="flex-row v-center no-underline" style=max-width:45%>
+<span class=re-underline>Next: Journal: Latter Half of October '17</span>&nbsp;<span class=text-1p5>→</span>
+</a>
+</nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html><html lang=en-us prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+<meta charset=utf-8>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<meta name=HandheldFriendly content="True">
+<meta name=MobileOptimized content="320">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=apple-touch-icon sizes=180x180 href=https://crmejia.github.io/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://crmejia.github.io/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://crmejia.github.io/favicon-16x16.png>
+<link rel=manifest href=https://crmejia.github.io/site.webmanifest>
+<link rel=mask-icon href=https://crmejia.github.io/safari-pinned-tab.svg color=#5bbad5>
+<meta name=msapplication-TileColor content="#da532c">
+<meta name=theme-color content="#ffffff">
+<meta name=keywords content="GCP,
+Kubernetes,
+Neovim,
+Prometheus,
+">
+<meta property="og:title" content="Journal: Latter Half of October '17">
+<meta property="og:description" content="So here is an update on what I’ve been doing in the latter half of October.
+Prometheus I’m finally playing around with Prometheus and monitoring which is something I wanted to do for a long time. I’ve started by creating a 5 node cluster on GKE and then following a simple guide, Kubernetes monitoring with Prometheus in 15 minutes by Giancarlo Rubio. Afterwards, I watched two talks about the subject Monitoring, the Prometheus Way by Julius Volz, one of the founders of Prometheus.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://crmejia.github.io/posts/latter_half_oct17/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2017-11-02T16:03:52+00:00">
+<meta property="article:modified_time" content="2017-11-02T16:03:52+00:00">
+<meta property="og:site_name" content="Crismar.Me">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Journal: Latter Half of October '17">
+<meta name=twitter:description content="So here is an update on what I’ve been doing in the latter half of October.
+Prometheus I’m finally playing around with Prometheus and monitoring which is something I wanted to do for a long time. I’ve started by creating a 5 node cluster on GKE and then following a simple guide, Kubernetes monitoring with Prometheus in 15 minutes by Giancarlo Rubio. Afterwards, I watched two talks about the subject Monitoring, the Prometheus Way by Julius Volz, one of the founders of Prometheus.">
+<meta itemprop=name content="Journal: Latter Half of October '17">
+<meta itemprop=description content="So here is an update on what I’ve been doing in the latter half of October.
+Prometheus I’m finally playing around with Prometheus and monitoring which is something I wanted to do for a long time. I’ve started by creating a 5 node cluster on GKE and then following a simple guide, Kubernetes monitoring with Prometheus in 15 minutes by Giancarlo Rubio. Afterwards, I watched two talks about the subject Monitoring, the Prometheus Way by Julius Volz, one of the founders of Prometheus."><meta itemprop=datePublished content="2017-11-02T16:03:52+00:00">
+<meta itemprop=dateModified content="2017-11-02T16:03:52+00:00">
+<meta itemprop=wordCount content="279">
+<meta itemprop=keywords content="GCP,Kubernetes,Neovim,Prometheus,">
+<title>Journal: Latter Half of October '17 || Crismar.Me</title>
+<link rel=canonical href=https://crmejia.github.io/posts/latter_half_oct17/>
+<link rel=stylesheet href=/css/reboot.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/syntax.css>
+<script type=text/javascript src=/js/main.js></script>
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel=stylesheet>
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<link rel=apple-touch-icon href=/apple-touch-icon.png>
+</head>
+<body class=look-sheet-bkg lang=en-us>
+<div class="navbar nav-bkg drop-shadow">
+<nav class="content-container pagewide-bar-padding">
+<span class=divider>/ </span>
+<a href=/>Crismar.Me</a>
+<span class=divider>/ </span>
+<a href=/posts/>Posts</a>
+<ul class="list-unstyled right-links">
+<li>
+<a href=/about/>
+<span class=post-title>about</span>
+</a>
+</li>
+<li>
+<a href=/posts/>
+<span class=post-title>blog</span>
+</a>
+</li>
+<li>
+<a href=/consulting/>
+<span class=post-title>consulting</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<article id=main class="content-container look-sheet article-pad-v" itemscope itemtype=https://schema.org/Article>
+<meta itemprop=author content>
+<meta itemprop=publisher content>
+<meta itemprop=image content>
+<h1 itemprop=name id=title>Journal: Latter Half of October '17</h1>
+<meta itemprop=headline content="Journal: Latter Half of October '17">
+<div class=post-tags>
+<a href=https://crmejia.github.io/tags/gcp/>#GCP</a>&nbsp;
+<a href=https://crmejia.github.io/tags/kubernetes/>#Kubernetes</a>&nbsp;
+<a href=https://crmejia.github.io/tags/neovim/>#Neovim</a>&nbsp;
+<a href=https://crmejia.github.io/tags/prometheus/>#Prometheus</a>&nbsp;
+</div>
+<div class=post-date><span itemprop=datePublished>November 2, 2017</span></div>
+<meta itemprop=dateModified content="November 2, 2017">
+<div itemprop=articleBody id=content class="article-body margin-top-2em">
+<p>So here is an update on what I’ve been doing in the latter half of October.</p>
+<h2 id=prometheus>Prometheus</h2>
+<p>I’m finally playing around with Prometheus and monitoring which is something I wanted to do for a long time. I’ve started by creating a 5 node cluster on GKE and then following a simple guide, <a href=https://itnext.io/kubernetes-monitoring-with-prometheus-in-15-minutes-8e54d1de2e13>Kubernetes monitoring with Prometheus in 15 minutes</a> by <a href=https://twitter.com/gianrubio>Giancarlo Rubio</a>. Afterwards, I watched two talks about the subject <a href="https://www.youtube.com/watch?v=PDxcEzu62jk">Monitoring, the Prometheus Way</a> by <a href=https://twitter.com/juliusvolz>Julius Volz</a>, one of the founders of Prometheus. Also, <a href="https://www.youtube.com/watch?v=5Jr1v9mWnJc">End to end monitoring with the Prometheus Operato</a>r by <a href=https://twitter.com/fredbrancz>Frederic Branczyk</a>, he works for CoreOS and is one of the maintainers of the Prometheus Operator. I’ve learned a lot from both talks, now I plan to dive deeper into monitoring. As a side note, I’ve also watched <a href="https://www.youtube.com/watch?v=zBc1goRfk3k" title="Taking the Helm: Delivering Kubernetes-Native Applications by Michelle Noorali">Taking the Helm: Delivering Kubernetes-Native Applications</a> by <a href=https://twitter.com/michellenoorali>Michelle </a>Noorali, Matt Butcher, and <a href=https://twitter.com/prydonius>Adnan Abdulhussein</a>.  I watched it because Helm is a very important project, in my opinion, and I used it to install the Prometheus operator.</p>
+<h2 id=service-catalog>Service-Catalog</h2>
+<p>Last time, I mentioned I was reading up on the k8s API since I was working on a ticket. Here is the <a href=https://github.com/kubernetes-incubator/service-catalog/pull/1480>Pull Request</a>. This one was basically Bash scripting and Makefiles, however, I did learn a lot!</p>
+<h2 id=neovim>Neovim</h2>
+<p>So I’ve been busy learning VIM, however, I decided to start using Neovim instead. Is a drop-in replacement for VIM that tries to keep what’s good and add new features. The same configuration works. I’ve also created a <a href=https://github.com/crmejia/dotfiles>dotfiles repo</a> to keep track of my configuration. Have a look!</p>
+<h2 id=conclusion>Conclusion</h2>
+<p>That’s about it for these last two weeks. I’m planning to stick with the same subjects going into November. Catch you later!</p>
+</div>
+</article>
+<div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75 drop-shadow">
+<nav class=flex-row>
+<a href=https://crmejia.github.io/posts/september-october-17-kubeadm-k8s-api/ class="flex-row v-center no-underline" style=max-width:45%>
+<span class=text-1p5>←</span>&nbsp;<span class=re-underline>Previous: September & October '17: kubeadm, K8s API, VIM, and a little Housekeeping</span>
+</a>
+<a href=https://crmejia.github.io/posts/my-cloudnativecon-kubecon-17-experience/ class="flex-row v-center no-underline" style=max-width:45%>
+<span class=re-underline>Next: My CloudNativeCon + KubeCon '17 Experience</span>&nbsp;<span class=text-1p5>→</span>
+</a>
+</nav>
+</div>
+</body>
+</html>

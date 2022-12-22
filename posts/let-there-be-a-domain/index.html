@@ -1,0 +1,157 @@
+<!doctype html><html lang=en-us prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+<meta charset=utf-8>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<meta name=HandheldFriendly content="True">
+<meta name=MobileOptimized content="320">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=apple-touch-icon sizes=180x180 href=https://crmejia.github.io/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://crmejia.github.io/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://crmejia.github.io/favicon-16x16.png>
+<link rel=manifest href=https://crmejia.github.io/site.webmanifest>
+<link rel=mask-icon href=https://crmejia.github.io/safari-pinned-tab.svg color=#5bbad5>
+<meta name=msapplication-TileColor content="#da532c">
+<meta name=theme-color content="#ffffff">
+<meta name=keywords content="Docker,
+GCP,
+Kubernetes,
+WordPress,
+">
+<meta property="og:title" content="Let There be a Domain">
+<meta property="og:description" content="Now that the blog is back up finally we can finally get around to setting up a domain. First thing we would need is a static IP to point the domain to. So let’s do.
+Static IP on GKE for a Kubernetes Service I did not find an official guide on how to do this. Fortunately, I found a blog post and a Stack Overflow answer that explains how to accomplish this.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://crmejia.github.io/posts/let-there-be-a-domain/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2017-05-04T18:41:36+00:00">
+<meta property="article:modified_time" content="2017-05-04T18:41:36+00:00">
+<meta property="og:site_name" content="Crismar.Me">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Let There be a Domain">
+<meta name=twitter:description content="Now that the blog is back up finally we can finally get around to setting up a domain. First thing we would need is a static IP to point the domain to. So let’s do.
+Static IP on GKE for a Kubernetes Service I did not find an official guide on how to do this. Fortunately, I found a blog post and a Stack Overflow answer that explains how to accomplish this.">
+<meta itemprop=name content="Let There be a Domain">
+<meta itemprop=description content="Now that the blog is back up finally we can finally get around to setting up a domain. First thing we would need is a static IP to point the domain to. So let’s do.
+Static IP on GKE for a Kubernetes Service I did not find an official guide on how to do this. Fortunately, I found a blog post and a Stack Overflow answer that explains how to accomplish this."><meta itemprop=datePublished content="2017-05-04T18:41:36+00:00">
+<meta itemprop=dateModified content="2017-05-04T18:41:36+00:00">
+<meta itemprop=wordCount content="1062">
+<meta itemprop=keywords content="Docker,GCP,Kubernetes,WordPress,">
+<title>Let There be a Domain || Crismar.Me</title>
+<link rel=canonical href=https://crmejia.github.io/posts/let-there-be-a-domain/>
+<link rel=stylesheet href=/css/reboot.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/syntax.css>
+<script type=text/javascript src=/js/main.js></script>
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel=stylesheet>
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<link rel=apple-touch-icon href=/apple-touch-icon.png>
+</head>
+<body class=look-sheet-bkg lang=en-us>
+<div class="navbar nav-bkg drop-shadow">
+<nav class="content-container pagewide-bar-padding">
+<span class=divider>/ </span>
+<a href=/>Crismar.Me</a>
+<span class=divider>/ </span>
+<a href=/posts/>Posts</a>
+<ul class="list-unstyled right-links">
+<li>
+<a href=/about/>
+<span class=post-title>about</span>
+</a>
+</li>
+<li>
+<a href=/posts/>
+<span class=post-title>blog</span>
+</a>
+</li>
+<li>
+<a href=/consulting/>
+<span class=post-title>consulting</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<article id=main class="content-container look-sheet article-pad-v" itemscope itemtype=https://schema.org/Article>
+<meta itemprop=author content>
+<meta itemprop=publisher content>
+<meta itemprop=image content>
+<h1 itemprop=name id=title>Let There be a Domain</h1>
+<meta itemprop=headline content="Let There be a Domain">
+<div class=post-tags>
+<a href=https://crmejia.github.io/tags/docker/>#Docker</a>&nbsp;
+<a href=https://crmejia.github.io/tags/gcp/>#GCP</a>&nbsp;
+<a href=https://crmejia.github.io/tags/kubernetes/>#Kubernetes</a>&nbsp;
+<a href=https://crmejia.github.io/tags/wordpress/>#WordPress</a>&nbsp;
+</div>
+<div class=post-date><span itemprop=datePublished>May 4, 2017</span></div>
+<meta itemprop=dateModified content="May 4, 2017">
+<div itemprop=articleBody id=content class="article-body margin-top-2em">
+<p>Now that the blog is back up finally we can finally get around to setting up a domain. First thing we would need is a static IP to point the domain to. So let’s do.</p>
+<h3 id=static-ip-on-gke-for-a-kubernetes-service>Static IP on GKE for a Kubernetes Service</h3>
+<p>I did not find an official guide on how to do this. Fortunately, I found a <a href=http://terrenceryan.com/blog/index.php/making-kubernetes-ip-addresses-static-on-google-container-engine/>blog post</a> and a <a href=http://stackoverflow.com/questions/32266053/how-to-specify-static-ip-address-for-kubernetes-load-balancer#answer-33830507>Stack Overflow</a> answer that explains how to accomplish this. In summary, there are two ways (1) reserve a static IP address and then assign it to the load balancer or (2) change an already existing load balancer IP from ephemeral to static. Both are done from the<a href=https://console.cloud.google.com/networking/addresses/list> GCP Networking > External IP addresses dashboard</a>. Since the blog is already UP, I’m going to switch the service IP to static. Now we must add a <code>loadBalancerIP: 10.10.10.10</code> field to our service deployment. That way if we need to redeploy k8s knows where it needs to point.</p>
+<h3 id=let-there-be-a-domain>Let There be a Domain</h3>
+<p>I thought about it for a while and looked around on what would work as the blog name. Since is a software/technology blog I notice some of the most popular developer’s blog use name and/or last name. So it made sense to use my name or something rather simple as the blog name. I found a short <a href=http://www.chrisg.com/catchy-blog-names/>blog post</a> going over some tips on what makes a good name. The tip: a blog name should be spellable caught my attention because my last name is not spelled(in english) like it sounds. So I sticked to my first name. I tried to get ramsir.com, my name spelled backwards, since the .com would add the C and my other initials(Mejia, Ozuna). Alas, it was taken as well as ramsirc. I  settled on crismar.me and bought the domain on godaddy with default setup: forward with masking to the server IP. Oh and I had to spend some time reading about DNS to freshen my memory. Julia Evans has some <a href=http://jvns.ca/zines/>cool zines on networking </a>and talks briefly about DNS.</p>
+<h3 id=unresponsive-blog>Unresponsive blog</h3>
+<p>The blog is down again. I changed two settings: WordPress Address URL and Site Address URL and broke the blog. I figured I should use my domain here instead of the IP but the changes broke the site.</p>
+<h4 id=hardcoding-urls-on-the-config-file>Hardcoding URLs on the config file</h4>
+<p>I found a <a href=https://codex.wordpress.org/Changing_The_Site_URL#Changing_the_Site_URL>guide</a> that explains how to manually hard code these settings in the main config file(wp_config.php). The challenge is how to set these values in a cluster setup, persistent volumes attached to a pod. I found <a href=https://cloud.google.com/compute/docs/disks/add-persistent-disk#formatting>another guide</a> that explains the process. Here’s the process step by step:</p>
+<ol>
+<li>
+<ol>
+<li>From GCP, ssh into the VM of the node using the disk. We can see the disks from <a href=https://console.cloud.google.com/compute/disks>https://console.cloud.google.com/compute/disks</a> We click on the VM of the node we are redirected to the VM compute instance.</li>
+</ol>
+</li>
+<li>Here we can click on the SSH button in the top left corner and connect to a fully function bash terminal hassle-free:</li>
+<li>Once we get access we proceed to mount the persistent disk.</li>
+</ol>
+<pre tabindex=0><code>$lsblk #list the disks&lt;br&gt;&lt;/br&gt;
+$sudo mkdir -p /mnt/disks/disk1&lt;br&gt;&lt;/br&gt;
+$sudo mount -o discard,defaults /dev/sdc /mnt/disks/disk1/&lt;br&gt;&lt;/br&gt;
+$cd /mnt/disks/disk1&lt;br&gt;&lt;/br&gt;
+$ls
+</code></pre><ol>
+<li>Make a backup of the the wp_config.php file,then open it in your favorite editor and add the lines below to set the url to be IP.</li>
+</ol>
+<pre tabindex=0><code>$cp wp-config.php ~&lt;br&gt;&lt;/br&gt;
+$sudo vim wp-config.php
+</code></pre><pre tabindex=0><code>define('WP_HOME','&lt;a href=&quot;http://example.com%27/&quot;&gt;http://10.0.0.1'&lt;/a&gt;);&lt;br&gt;&lt;/br&gt;
+define('WP_SITEURL','&lt;a href=&quot;http://example.com%27/&quot;&gt;http://10.0.0.1'&lt;/a&gt;);
+</code></pre><p>Back online! However, the settings are hardcoded and we are not able to change them in the admin dashboard. It would be better to connect to the DB and set the values back. So let’s do it!</p>
+<h4 id=setting-the-url-through-the-db>Setting the URL through the DB</h4>
+<p>Connecting to the DB means connecting to the mysql container running inside a pod. Just like docker allows us to run commands on a container using <code>docker run</code>, in Kubernetes we can use <code>kubectl exec</code> to run commands on a pod’s container(s). In our case the MySQL pod has only one container but if we had more we could specify the container by using the -c option. Here’s are the steps:</p>
+<ol>
+<li>connect to the DB</li>
+</ol>
+<pre tabindex=0><code>$kubectl get pods #basically get the pod name&lt;br&gt;&lt;/br&gt;
+$kubectl exec wordpress-mysql-2569670970-f1grp -- env #copy the mysql password&lt;br&gt;&lt;/br&gt;
+$kubectl exec wordpress-mysql-2569670970-f1grp -- mysql -p
+</code></pre><p>By this point we are inside the mysql cli. Notice that I did not set the password as I was not able to use the environment variable <code>MYSQL_ROOT_PASSWORD</code> as an argument just like docker run command does by using quotes. I did a little search and found this <a href=https://github.com/kubernetes/kubernetes/issues/7688>issue</a> which describes problems with quotes. There is a <a href=https://github.com/kubernetes/kubernetes/pull/43663>PR</a> on github trying to address the issue but is on hold as it broke some other functionality. So for the sake of brevity I decided to copy the env and paste it into mysql.</p>
+<ol>
+<li>Update the wp_options table</li>
+</ol>
+<p>In <a href=https://codex.wordpress.org/Changing_The_Site_URL#Changing_the_URL_directly_in_the_database>section 1.4</a> of the wp guide there is a brief explanation on how to change the URLs in the DB. It does so by accessing phpMyAdmin so the guide is only useful for us to get the table and fields that we need to change. Those are table <em>wp_options</em> and fields <em>siteurl</em> and <em>home</em>. So back in the <code>mysql cli</code> we run:</p>
+<pre tabindex=0><code>mysql&gt; use wordpress;  #set the db. Notice the ;&lt;br&gt;&lt;/br&gt;
+mysql&gt; select * from wp_options where option_name = 'siteurl' or option_name = 'home';&lt;br&gt;&lt;/br&gt;
+mysql&gt; update wp_options set option_value = 'http://104.196.161.37' where option_name = 'siteurl' or option_name = 'home';&lt;br&gt;&lt;/br&gt;
+mysql&gt; \exit
+</code></pre><p>Done. Now we can go back to the node VM, mount the wordpress persistent disk and remove the hardcoded values.</p>
+<p>Going back to the admin console I’m able to change the values again and the blog is still alive. Success!</p>
+<h4 id=conclusion>Conclusion</h4>
+<p>Setting up a domain proved easier than I expected. However, fixing the blog after my mistake was a good challenge. After all the problems I ran into I can confidently say I’m able to set up WordPress blog from scratch and do some basic debugging on a kubernetes cluster. I think knowing how to mount a persistent disk and how connect to a pod are useful basic skills in kubernetes.</p>
+<h4 id=whats-next>What’s next</h4>
+<p>For the next mini-project, I might set up a certificate for the site provided by let’s encrypt to enable https. Also, I’m thinking about setting up a monitoring and/or log solution other than kubernetes-ui dashboard to keep learning. Or I might setup a new cluster following one of the other examples in the repo. Stay tuned!</p>
+</div>
+</article>
+<div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75 drop-shadow">
+<nav class=flex-row>
+<a href=https://crmejia.github.io/posts/blog-day-1-site-unavailable/ class="flex-row v-center no-underline" style=max-width:45%>
+<span class=text-1p5>←</span>&nbsp;<span class=re-underline>Previous: Blog Day 1. Site Unavailable!?</span>
+</a>
+<a href=https://crmejia.github.io/posts/aws-ec2-bitnami-and-https-wlets-encrypt/ class="flex-row v-center no-underline" style=max-width:45%>
+<span class=re-underline>Next: AWS EC2 + Bitnami and HTTPS w/Let's Encrypt</span>&nbsp;<span class=text-1p5>→</span>
+</a>
+</nav>
+</div>
+</body>
+</html>
