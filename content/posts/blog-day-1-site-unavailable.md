@@ -2,7 +2,7 @@
 author = "Crismar Mejia"
 categories = ["Docker", "GCP", "Kubernetes", "WordPress"]
 date = 2017-04-17T21:39:55Z
-description = ""
+description = "Just got home from work to find my brand new blog very slow. Which I find odd since I’m still at 104.196.107.177 and only shared the IP with a friend. So I’m jumped on the cloud shell to have a looks at the pods logs"
 draft = false
 slug = "blog-day-1-site-unavailable"
 tags = ["Docker", "GCP", "Kubernetes", "WordPress"]

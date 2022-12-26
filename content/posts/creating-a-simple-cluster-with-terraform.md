@@ -2,7 +2,7 @@
 author = "Crismar Mejia"
 categories = ["AWS", "Infrastructure", "Terraform"]
 date = 2017-09-19T00:41:29Z
-description = ""
+description = "Creating a simple Kubernetes cluter in AWS with Terraform"
 draft = false
 slug = "creating-a-simple-cluster-with-terraform"
 tags = ["AWS", "Infrastructure", "Terraform"]

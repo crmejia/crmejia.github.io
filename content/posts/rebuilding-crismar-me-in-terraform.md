@@ -1,7 +1,7 @@
 +++
 author = "Crismar Mejia"
 date = 2021-08-16T21:57:41Z
-description = ""
+description = "It's been a while since I've maintained the blog. So instead of upgrading everything manually I've just decided to rewrite everything in Terraform and migrate the data"
 draft = false
 slug = "rebuilding-crismar-me-in-terraform"
 title = "Rebuilding crismar.me in Terraform"

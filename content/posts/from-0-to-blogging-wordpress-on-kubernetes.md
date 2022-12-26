@@ -2,7 +2,7 @@
 author = "Crismar Mejia"
 categories = ["Docker", "GCP", "Kubernetes", "WordPress"]
 date = 2017-04-16T22:50:28Z
-description = ""
+description = "Creating a  WordPress blog on Kubernetes"
 draft = false
 slug = "from-0-to-blogging-wordpress-on-kubernetes"
 tags = ["Docker", "GCP", "Kubernetes", "WordPress"]

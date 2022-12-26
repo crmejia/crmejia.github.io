@@ -1,5 +1,6 @@
 ---
 title: "Consulting"
+description: "here are the services I offer"
 ---
 
  I offer cloud consulting services with a focus on Kubernetes. I’m also available for Go contract work. Here’s a list of things I can help you with:

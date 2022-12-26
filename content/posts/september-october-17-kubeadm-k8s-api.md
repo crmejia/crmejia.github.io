@@ -2,7 +2,7 @@
 author = "Crismar Mejia"
 categories = ["kubeadm", "Kubernetes"]
 date = 2017-10-16T19:33:21Z
-description = ""
+description = "Bare Metal & kubeadm, Kubernetes API, VIM"
 draft = false
 slug = "september-october-17-kubeadm-k8s-api"
 tags = ["kubeadm", "Kubernetes"]

@@ -2,7 +2,7 @@
 author = "Crismar Mejia"
 categories = ["AWS", "Infrastructure"]
 date = 2017-09-03T20:15:56Z
-description = ""
+description = "Creating Infrastructure with Terraform"
 draft = false
 slug = "creating-infrastructure-with-terraform"
 tags = ["AWS", "Infrastructure"]

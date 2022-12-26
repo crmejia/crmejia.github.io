@@ -2,7 +2,7 @@
 author = "Crismar Mejia"
 categories = ["GCP", "Kubernetes", "Neovim", "Prometheus"]
 date = 2017-11-02T16:03:52Z
-description = ""
+description = "I’m finally playing around with Prometheus and monitoring which is something I wanted to do for a long time. I’ve started by creating a 5 node cluster on GKE and then following a simple guide"
 draft = false
 slug = "latter_half_oct17"
 tags = ["GCP", "Kubernetes", "Neovim", "Prometheus"]

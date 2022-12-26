@@ -2,7 +2,7 @@
 author = "Crismar Mejia"
 categories = ["Docker", "GCP", "Kubernetes", "WordPress"]
 date = 2017-05-04T18:41:36Z
-description = ""
+description = "Now that the blog is back up finally we can finally get around to setting up a domain. First thing we would need is a static IP to point the domain to"
 draft = false
 slug = "let-there-be-a-domain"
 tags = ["Docker", "GCP", "Kubernetes", "WordPress"]

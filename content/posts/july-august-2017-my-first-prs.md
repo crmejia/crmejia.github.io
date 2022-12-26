@@ -2,7 +2,7 @@
 author = "Crismar Mejia"
 categories = ["GitHub", "Kubernetes"]
 date = 2017-08-21T19:45:31Z
-description = ""
+description = "So last time I mentioned I was looking to contribute to the Kubernetes project. After an initially steep learning curve, I’ve managed to get two PRs approved on Service Catalog, a Kubernetes incubator project"
 draft = false
 slug = "july-august-2017-my-first-prs"
 tags = ["GitHub", "Kubernetes"]

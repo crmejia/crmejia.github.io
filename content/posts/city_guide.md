@@ -4,6 +4,7 @@ author: "Crismar Mejia"
 date: 2022-12-26T16:50:08-04:00
 draft: false
 tags: ["Go", "Digital Ocean", "Terraform", "SQLite", "Nginx"]
+description: "CityGuide is a WebApp to help you discover and share cool spots in cities. These guides are useful for backpackers, digital nomads, and people new in town that are keen to discover cool things"
 ---
 
 # CityGuide: Go WebApp to Share Locations

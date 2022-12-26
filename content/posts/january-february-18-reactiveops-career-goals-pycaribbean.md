@@ -2,7 +2,7 @@
 author = "Crismar Mejia"
 categories = ["Kubernetes", "Journal"]
 date = 2018-03-11T18:17:29Z
-description = ""
+description = "PyCaribbean, SRE, Kubeadm"
 draft = false
 slug = "january-february-18-reactiveops-career-goals-pycaribbean"
 tags = ["Kubernetes", "Journal"]

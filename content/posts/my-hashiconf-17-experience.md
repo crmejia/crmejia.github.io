@@ -2,7 +2,7 @@
 author = "Crismar Mejia"
 categories = ["conference", "Terraform"]
 date = 2017-09-27T21:58:24Z
-description = ""
+description = "Last week I had the opportunity to attend Hashiconf ‘17 in Austin, Texas. Here is a brief summary of my favorite talks and experiences"
 draft = false
 slug = "my-hashiconf-17-experience"
 tags = ["conference", "Terraform"]

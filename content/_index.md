@@ -1,4 +1,6 @@
 ---
+title: "Crismar.me"
+description: "I'm a SRE and Software engineer learning about new technologies"
 display_section: posts
 ---
 

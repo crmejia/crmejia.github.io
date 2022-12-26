@@ -2,7 +2,7 @@
 author = "Crismar Mejia"
 categories = ["Kubernetes"]
 date = 2017-07-02T11:11:30Z
-description = ""
+description = "I’ve kept myself busy this past month learning about different things in kubernetes and distributed systems"
 draft = false
 slug = "june-2017-journal-what-ive-been-up-to"
 tags = ["Kubernetes"]

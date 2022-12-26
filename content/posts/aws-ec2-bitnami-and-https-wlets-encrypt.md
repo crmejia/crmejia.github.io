@@ -2,7 +2,7 @@
 author = "Crismar Mejia"
 categories = ["AWS", "bitnami", "https", "let's encrypt", "WordPress"]
 date = 2017-05-15T20:07:06Z
-description = ""
+description = "I ran out of credit for Google Cloud. Turns out running a cluster is quite expensive. For the sake of having a blog while I keep learning about kubernetes and other technologies I decided to go with a simpler(and cheaper) approach to blogging"
 draft = false
 slug = "aws-ec2-bitnami-and-https-wlets-encrypt"
 tags = ["AWS", "bitnami", "https", "let's encrypt", "WordPress"]

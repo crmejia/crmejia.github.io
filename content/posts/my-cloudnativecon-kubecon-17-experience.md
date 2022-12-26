@@ -2,7 +2,7 @@
 author = "Crismar Mejia"
 categories = ["conference", "Kubernetes"]
 date = 2017-12-26T18:07:41Z
-description = ""
+description = "I was awarded a diversity scholarship to go to CloudNativeCon + Kubecon in Austin"
 draft = false
 slug = "my-cloudnativecon-kubecon-17-experience"
 tags = ["conference", "Kubernetes"]
