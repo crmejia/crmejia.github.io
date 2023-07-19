@@ -1,0 +1,110 @@
+<!doctype html><html lang=en-us prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+<meta charset=utf-8>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<meta name=HandheldFriendly content="True">
+<meta name=MobileOptimized content="320">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=apple-touch-icon sizes=180x180 href=https://crmejia.github.io/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://crmejia.github.io/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://crmejia.github.io/favicon-16x16.png>
+<link rel=manifest href=https://crmejia.github.io/site.webmanifest>
+<link rel=mask-icon href=https://crmejia.github.io/safari-pinned-tab.svg color=#5bbad5>
+<meta name=msapplication-TileColor content="#da532c">
+<meta name=theme-color content="#ffffff">
+<meta name=description content="Small Web App to count dominican style domino games. Written in Go, deployed in Fly.io">
+<meta name=keywords content="Go,
+Fly.io,
+SQLite,
+">
+<meta property="og:title" content="Domino Count">
+<meta property="og:description" content="Small Web App to count dominican style domino games. Written in Go, deployed in Fly.io">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://crmejia.github.io/posts/domino_count/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2023-07-17T15:17:43-04:00">
+<meta property="article:modified_time" content="2023-07-17T15:17:43-04:00">
+<meta property="og:site_name" content="Crismar.Me">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Domino Count">
+<meta name=twitter:description content="Small Web App to count dominican style domino games. Written in Go, deployed in Fly.io">
+<meta itemprop=name content="Domino Count">
+<meta itemprop=description content="Small Web App to count dominican style domino games. Written in Go, deployed in Fly.io"><meta itemprop=datePublished content="2023-07-17T15:17:43-04:00">
+<meta itemprop=dateModified content="2023-07-17T15:17:43-04:00">
+<meta itemprop=wordCount content="287">
+<meta itemprop=keywords content="Go,Fly.io,SQLite,">
+<title>Domino Count || Crismar.Me</title>
+<link rel=canonical href=https://crmejia.github.io/posts/domino_count/>
+<link rel=stylesheet href=/css/reboot.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/syntax.css>
+<script type=text/javascript src=/js/main.js></script>
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel=stylesheet>
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<link rel=apple-touch-icon href=/apple-touch-icon.png>
+</head>
+<body class=look-sheet-bkg lang=en-us>
+<div class="navbar nav-bkg drop-shadow">
+<nav class="content-container pagewide-bar-padding">
+<span class=divider>/ </span>
+<a href=/>Crismar.Me</a>
+<span class=divider>/ </span>
+<a href=/posts/>Posts</a>
+<ul class="list-unstyled right-links">
+<li>
+<a href=/about/>
+<span class=post-title>about</span>
+</a>
+</li>
+<li>
+<a href=/posts/>
+<span class=post-title>blog</span>
+</a>
+</li>
+<li>
+<a href=/consulting/>
+<span class=post-title>consulting</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<article id=main class="content-container look-sheet article-pad-v" itemscope itemtype=https://schema.org/Article>
+<meta itemprop=author content>
+<meta itemprop=publisher content>
+<meta itemprop=image content>
+<h1 itemprop=name id=title>Domino Count</h1>
+<meta itemprop=headline content="Domino Count">
+<div class=post-tags>
+<a href=https://crmejia.github.io/tags/go/>#Go</a>&nbsp;
+<a href=https://crmejia.github.io/tags/fly.io/>#Fly.io</a>&nbsp;
+<a href=https://crmejia.github.io/tags/sqlite/>#SQLite</a>&nbsp;
+</div>
+<div class=post-date><span itemprop=datePublished>July 17, 2023</span></div>
+<meta itemprop=dateModified content="July 17, 2023">
+<div itemprop=articleBody id=content class="article-body margin-top-2em">
+<p>Howdy folks,</p>
+<p>Let me introduce <a href=https://billowing-glade-1070.fly.dev/>Domino Count</a>, a web app for keeping score of a game of dominoes. You can find the repo <a href=https://github.com/crmejia/DominoCount>here</a>. My goals with this project were:</p>
+<ul>
+<li>Frontend: Experiment with htmx and Tailwind CSS. The end result still looks terrible, but with classes :laughing:</li>
+<li>DevOps and infrastructure: Use Github Actions to deploy to <a href=http://fly.io/>Fly.io</a></li>
+</ul>
+<p>On the Go side of things, there were a few new things for me:</p>
+<ul>
+<li>Delivering static content using go:embed and http.FileServer: Delivering static content (images, scripts, stylesheets, and other resources) is a standard task in a web app. I did run into a weird bug by using gorilla.mux for <a href=https://github.com/crmejia/DominoCount/blob/c129464d9fabbde2cabfd771321ba3450659d31b/server.go#L109>routing</a>, as the matches are a bit different from http. (See <a href=https://github.com/crmejia/DominoCount/blob/master/server.go#L20>L20</a>, <a href=https://github.com/crmejia/DominoCount/blob/master/server.go#L29>L29</a>, <a href=https://github.com/crmejia/DominoCount/blob/master/server.go#L259>L259</a>)</li>
+<li>Handling an HTTP PATCH request: As far as I understand, this type of request is not normally supported by a browser, but htmx enables you to send other types of requests, not just GET and POST. (See <a href=https://github.com/crmejia/DominoCount/blob/master/server.go#L132>L132</a>)</li>
+</ul>
+<p>An issue worth mentioning is the data replication problem I ran into. I&rsquo;m using SQLite as my backend since it&rsquo;s simple and robust. However, by default, <a href=http://fly.io/>Fly.io</a> creates two machines and load balances between them. The issue arises because each instance has its own volume attached to it, so making sure data is replicated is left as <a href=https://fly.io/docs/reference/volumes/#volume-considerations>an exercise to the reader</a>. There is an open-source solution being developed by Fly.io called <a href=https://github.com/superfly/litefs>LiteFS</a>. However, to install it, I would have to switch to Docker images. Another solution could be to scale down the instances to a single app.</p>
+<p>For the time being, before I hit project fatigue, I&rsquo;ll work on something else. Maybe writing that data replication package. Or finally, creating an auth package to use in my apps.</p>
+</div>
+</article>
+<div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75 drop-shadow">
+<nav class=flex-row>
+<a href=https://crmejia.github.io/posts/city_guide/ class="flex-row v-center no-underline" style=max-width:45%>
+<span class=text-1p5>←</span>&nbsp;<span class=re-underline>Previous: CityGuide: Go WebApp to Share Locations</span>
+</a>
+<span class="flex-row v-center"></span>
+</nav>
+</div>
+</body>
+</html>
