@@ -15,3 +15,7 @@ theme = "paperesque"
 [[params.topmenu]]
   name = "consulting"
   url = "consulting/"
+
+[services]
+  [services.googleAnalytics]
+    ID = 'G-CDK4087KM8'
