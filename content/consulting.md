@@ -14,9 +14,4 @@ description: "here are the services I offer"
 * Review Technical Docs.
 * Cloud Infra assessment report.
 
-For more information you can reach out by email, [Twitter](https://www.twitter.com/CrismarMoz), or [LinkedIn](https://www.linkedin.com/in/crismarmoz/).
-
-
-
-
-
+For more information you can reach out by <consulting@crismar.me>, [Twitter](https://www.twitter.com/CrismarMoz), or [LinkedIn](https://www.linkedin.com/in/crismarmoz/).
