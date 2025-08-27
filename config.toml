@@ -2,7 +2,7 @@ baseURL = 'https://crmejia.github.io'
 languageCode = 'en-us'
 title = 'Crismar.Me'
 
-theme = "ananke"
+theme = "terminal"
 
 [[params.topmenu]]
 name = "about"
