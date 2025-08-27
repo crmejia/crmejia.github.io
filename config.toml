@@ -2,20 +2,20 @@ baseURL = 'https://crmejia.github.io'
 languageCode = 'en-us'
 title = 'Crismar.Me'
 
-theme = "paperesque"
+theme = "ananke"
 
 [[params.topmenu]]
-  name = "about"
-  url = "about/"
+name = "about"
+url = "about/"
 
 [[params.topmenu]]
-  name = "blog"
-  url = "posts/"
+name = "blog"
+url = "posts/"
 
 [[params.topmenu]]
-  name = "consulting"
-  url = "consulting/"
+name = "consulting"
+url = "consulting/"
 
 [services]
-  [services.googleAnalytics]
-    ID = 'G-CDK4087KM8'
+[services.googleAnalytics]
+ID = 'G-CDK4087KM8'

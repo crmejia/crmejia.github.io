@@ -13,7 +13,7 @@ title = "My Hashiconf '17 Experience"
 Last week I had the opportunity to attend Hashiconf ‘17 in Austin, Texas. I loved the atmosphere at the event and the city. I met some interesting people and learned how they use Hashicorp products to solve their problems. Here is a brief summary of my favorite talks and experiences.
 
 > Front row [#Hashiconf](https://twitter.com/hashtag/Hashiconf?src=hash&ref_src=twsrc%5Etfw) keynote [pic.twitter.com/QDSWUTRBns](https://t.co/QDSWUTRBns)
-> 
+>
 > — Crismar Mejia (@CrismarMOz) [September 19, 2017](https://twitter.com/CrismarMOz/status/910148068191932416?ref_src=twsrc%5Etfw)
 
 
@@ -48,6 +48,3 @@ It was my first time in Austin so after the conference, I stayed two more nights
 ## Conclusion
 
 I had a great conference experience and a great mini-vacation in Austin. I was able to learn new things and meet interesting people. I feel refreshed and inspired to keep diving deeper and learning new things. So stay put and expect more posts!
-
-<div class="gallery galleryid-147 gallery-columns-3 gallery-size-thumbnail" id="gallery-1"><figure class="gallery-item"><div class="gallery-icon portrait">[![](https://crismar.me/content/images/2017/09/blaton-150x150.jpg)](https://crismar.me/2017/09/27/my-hashiconf-17-experience/blaton/)</div><figcaption class="wp-caption-text gallery-caption" id="gallery-1-156"> Blanton Museum of Art </figcaption></figure><figure class="gallery-item"><div class="gallery-icon portrait">[![](https://crismar.me/content/images/2017/09/capitol-150x150.jpg)](https://crismar.me/2017/09/27/my-hashiconf-17-experience/capitol/)</div><figcaption class="wp-caption-text gallery-caption" id="gallery-1-155"> Texas State Capitol </figcaption></figure><figure class="gallery-item"><div class="gallery-icon portrait">[![](https://crismar.me/content/images/2017/09/senate-150x150.jpg)](https://crismar.me/2017/09/27/my-hashiconf-17-experience/senate/)</div><figcaption class="wp-caption-text gallery-caption" id="gallery-1-159"> Texas House of Representatives </figcaption></figure><figure class="gallery-item"><div class="gallery-icon portrait">[![](https://crismar.me/content/images/2017/09/house-150x150.jpg)](https://crismar.me/2017/09/27/my-hashiconf-17-experience/house/)</div><figcaption class="wp-caption-text gallery-caption" id="gallery-1-158"> Texas State </figcaption></figure><figure class="gallery-item"><div class="gallery-icon portrait">[![](https://crismar.me/content/images/2017/09/bats-150x150.jpg)](https://crismar.me/2017/09/27/my-hashiconf-17-experience/bats/)</div><figcaption class="wp-caption-text gallery-caption" id="gallery-1-157"> View from the Ann W. Richards Congress Avenue Bridge </figcaption></figure></div>
-
