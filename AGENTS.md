@@ -6,7 +6,7 @@ This is a Hugo static site — a personal technical blog for a Site Reliability 
 
 ## Tech Stack
 
-- **Static site generator:** [Hugo](https://gohugo.io/) (v0.121.1 extended)
+- **Static site generator:** [Hugo](https://gohugo.io/) (v0.147.3 extended)
 - **Theme:** `paperesque` (located in `themes/paperesque/`, added as a git subtree)
 - **Deployment:** GitHub Actions → GitHub Pages (see `.github/workflows/gh-pages.yml`)
 - **Custom domain:** configured via `static/CNAME`
@@ -29,6 +29,8 @@ static/
   CNAME                  # Custom domain file for GitHub Pages
 .github/workflows/
   gh-pages.yml           # CI/CD: build Hugo site and deploy to GitHub Pages
+Makefile                 # Build, lint, and dev server targets
+.tool-versions           # asdf version pinning (Hugo)
 ```
 
 ## Key Rules
@@ -64,14 +66,12 @@ The top navigation is defined in `config.toml` under `[[params.topmenu]]`. Curre
 ## Building and Previewing
 
 ```bash
-# Local dev server with drafts visible
-hugo server -D
-
-# Production build (matches CI)
-hugo --gc --minify
+make serve     # Local dev server with drafts visible
+make build     # Production build (matches CI)
+make check     # Lint + clean build — run before pushing
 ```
 
-The CI pipeline (`.github/workflows/gh-pages.yml`) runs on every push to `main`. It installs Hugo 0.121.1 extended + Dart Sass, builds with `--gc --minify`, and deploys to GitHub Pages.
+The CI pipeline (`.github/workflows/gh-pages.yml`) runs on every push to `main`. It installs Hugo 0.147.3 extended, builds with `--gc --minify`, and deploys to GitHub Pages.
 
 ## Deployment
 
@@ -82,8 +82,9 @@ Deployment is fully automated. Push to `main` and GitHub Actions handles the res
 | Task | Command / Location |
 |---|---|
 | Create a new post | `hugo new posts/post-name.md` |
-| Preview locally (with drafts) | `hugo server -D` |
-| Build for production | `hugo --gc --minify` |
+| Preview locally (with drafts) | `make serve` |
+| Build for production | `make build` |
+| Lint + build before pushing | `make check` |
 | Edit site config | `config.toml` |
 | Override a theme template | Copy from `themes/paperesque/layouts/` to `layouts/` and edit |
 | Add a navigation item | Add a `[[params.topmenu]]` block in `config.toml` |
