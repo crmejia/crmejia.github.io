@@ -7,7 +7,7 @@ This is a Hugo static site — a personal technical blog for a Site Reliability 
 ## Tech Stack
 
 - **Static site generator:** [Hugo](https://gohugo.io/) (v0.147.3 extended)
-- **Theme:** `paperesque` (located in `themes/paperesque/`, added as a git subtree)
+- **Theme:** `paperesque` (located in `themes/paperesque/`, customized — no longer synced with upstream)
 - **Deployment:** GitHub Actions → GitHub Pages (see `.github/workflows/gh-pages.yml`)
 - **Custom domain:** configured via `static/CNAME`
 
@@ -35,9 +35,20 @@ Makefile                 # Build, lint, and dev server targets
 
 ## Key Rules
 
-### Do not modify the theme
+### Theme is customized
 
-The `themes/paperesque/` directory is a git subtree from an upstream repo. Do not edit files inside it. Use Hugo's layout override mechanism instead — place files in the top-level `layouts/` directory to override theme templates.
+The `themes/paperesque/` directory was originally a git subtree but has been extensively customized (modern redesign with zinc palette, reactive dark mode, Inter font, Catppuccin syntax highlighting). It is no longer synced with upstream. Edit theme files directly when making visual or structural changes. Key theme files:
+
+- **CSS**: `themes/paperesque/assets/css/style.css` (all CSS variables + styles)
+- **Syntax**: `themes/paperesque/assets/css/syntax.css` (Catppuccin Mocha)
+- **JS (bundled)**: `themes/paperesque/assets/js/main.js` (what Hugo serves)
+- **JS (source)**: `themes/paperesque/js/` (readable source modules)
+- **Layouts**: `themes/paperesque/layouts/` (Hugo templates)
+
+When changing theme colors, keep these files in sync:
+1. CSS variables in `style.css` (`:root` and `@media (prefers-color-scheme: dark)`)
+2. `<meta name="theme-color">` in `layouts/_partials/meta.html`
+3. Hardcoded colors in `assets/js/main.js` (theme-color meta tag updates)
 
 ### Content conventions
 
