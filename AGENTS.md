@@ -19,9 +19,9 @@ content/
   _index.md              # Homepage
   about.md               # About page
   consulting.md          # Consulting services page
-  posts/                 # Blog posts (markdown with YAML front matter)
+  posts/                 # Blog posts (markdown with TOML front matter)
 themes/
-  paperesque/            # Active theme (git subtree, do NOT modify)
+  paperesque/            # Active theme (customized, edit directly)
 layouts/                 # Custom layout overrides (currently minimal)
 archetypes/
   default.md             # Template for new posts
@@ -45,23 +45,23 @@ The `themes/paperesque/` directory was originally a git subtree but has been ext
 - **JS (source)**: `themes/paperesque/js/` (readable source modules)
 - **Layouts**: `themes/paperesque/layouts/` (Hugo templates)
 
-When changing theme colors, keep these files in sync:
-1. CSS variables in `style.css` (`:root` and `@media (prefers-color-scheme: dark)`)
+When changing theme colors, keep these three files in sync:
+1. CSS variables in `style.css` (`:root` for light, `html[data-theme="dark"]` for dark)
 2. `<meta name="theme-color">` in `layouts/_partials/meta.html`
 3. Hardcoded colors in `assets/js/main.js` (theme-color meta tag updates)
 
 ### Content conventions
 
-Blog posts live in `content/posts/` as Markdown files with YAML front matter:
+Blog posts live in `content/posts/` as Markdown files with TOML front matter (`+++`):
 
-```yaml
----
-title: "Post Title"
-date: 2024-05-08T23:19:49-04:00
-draft: false
-tags: ["Go", "Docker", "Kubernetes"]
-description: "Optional short description"
----
+```toml
++++
+title = "Post Title"
+date = 2024-05-08T23:19:49-04:00
+draft = false
+tags = ["Go", "Docker", "Kubernetes"]
+description = "Optional short description"
++++
 ```
 
 - `draft: true` posts are not published. Set `draft: false` to publish.
@@ -93,6 +93,21 @@ make check     # Lint + clean build — run before pushing
 ```
 
 The CI pipeline (`.github/workflows/gh-pages.yml`) runs on every push to `main`. It installs Hugo 0.147.3 extended, builds with `--gc --minify`, and deploys to GitHub Pages.
+
+## Development Workflow
+
+When making visual or structural changes, always present the result to the user with a running dev server before committing:
+
+1. Make your changes to the relevant files.
+2. Run `make serve` to start the local dev server (includes drafts).
+3. Let the user verify the changes in the browser at `http://localhost:1313/`.
+4. Iterate on feedback until approved.
+5. Run `make check` (lint + clean build) before committing to catch errors early.
+6. Commit and push.
+
+### Git worktrees
+
+If working on a git worktree (branch), changes **must be merged to `main` before pushing**. The GitHub Actions deployment workflow (`.github/workflows/gh-pages.yml`) only triggers on pushes to the `main` branch. Pushing a feature branch will not deploy.
 
 ## Deployment
 
