@@ -1,14 +1,13 @@
 ---
-title: "Crismar.me"
-description: "I'm a SRE and Software engineer learning about new technologies"
+title: "Crismar Mejia"
+description: "Site Reliability Engineer, Go developer, and Kubernetes specialist. Building reliable infrastructure for remote teams worldwide."
 display_section: posts
 ---
 
-### Hi
+### Howdy!
 
-I'm a SRE and Software Engineer than enjoys learning about new technologies. So far I've written about Go, Kubernetes, Containers, WebApp Deployment, and Terraform.
+I'm Crismar -- a Site Reliability Engineer and Go developer. I help teams run reliable Kubernetes infrastructure, and I build things on the side.
 
-You can find me on:
+I write about Go, Kubernetes, Terraform, and whatever I'm tinkering with. This blog is my journal -- documenting the journey, one deploy at a time.
 
-* [Twitter](https://www.twitter.com/CrismarMoz)
-* [LinkedIn](https://www.linkedin.com/in/crismarmoz/)
+[About me](/about) | [Consulting](/consulting) | [LinkedIn](https://www.linkedin.com/in/crismarmoz/) | [Twitter](https://www.twitter.com/CrismarMoz)

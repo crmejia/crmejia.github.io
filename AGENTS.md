@@ -70,6 +70,16 @@ description: "Optional short description"
 - The `date` field uses ISO 8601 with timezone offset.
 - New posts can be scaffolded with `hugo new posts/my-post-title.md`.
 
+### Content scope restrictions
+
+Blog posts in `content/posts/` must NEVER be modified. Content changes are restricted to:
+- `content/about.md` (About page)
+- `content/consulting.md` (Consulting page)
+- `content/_index.md` (Homepage)
+- `config.toml` (Site configuration)
+
+This rule exists to protect published blog content from unintended modifications during site-wide changes.
+
 ### Navigation menu
 
 The top navigation is defined in `config.toml` under `[[params.topmenu]]`. Currently: about, blog, consulting.
