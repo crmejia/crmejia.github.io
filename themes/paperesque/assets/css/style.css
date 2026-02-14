@@ -44,37 +44,33 @@
 
 
 /* ==========================================================================
-   Dark Mode
+   Dark Mode — driven by data-theme attribute (set by JS)
    ========================================================================== */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #09090B;
-    --color-surface: #18181B;
-    --color-text: #FAFAFA;
-    --color-text-secondary: #A1A1AA;
-    --color-accent: #60A5FA;
-    --color-accent-hover: #93C5FD;
-    --color-border: #27272A;
-    --color-navbar: #09090B;
-    --color-navbar-text: #FAFAFA;
+html[data-theme="dark"] {
+  --color-bg: #09090B;
+  --color-surface: #18181B;
+  --color-text: #FAFAFA;
+  --color-text-secondary: #A1A1AA;
+  --color-accent: #60A5FA;
+  --color-accent-hover: #93C5FD;
+  --color-border: #27272A;
+  --color-navbar: #09090B;
+  --color-navbar-text: #FAFAFA;
 
-    --color-code-bg: #18181B;
-    --color-code-text: #E4E4E7;
-    --color-pre-bg: #111113;
-    --color-pre-text: #CDD6F4;
-    --color-blockquote-border: #60A5FA;
-    --color-kbd-bg: #3F3F46;
-    --color-kbd-text: #FAFAFA;
-    --color-hr: #27272A;
-    --color-draft-stripe: #854D0E;
-    --color-tag: #A1A1AA;
-    --color-tag-hover: #60A5FA;
-  }
+  --color-code-bg: #18181B;
+  --color-code-text: #E4E4E7;
+  --color-pre-bg: #111113;
+  --color-pre-text: #CDD6F4;
+  --color-blockquote-border: #60A5FA;
+  --color-kbd-bg: #3F3F46;
+  --color-kbd-text: #FAFAFA;
+  --color-hr: #27272A;
+  --color-draft-stripe: #854D0E;
+  --color-tag: #A1A1AA;
+  --color-tag-hover: #60A5FA;
 
-  html {
-    color-scheme: dark;
-  }
+  color-scheme: dark;
 }
 
 
@@ -531,10 +527,8 @@ details.right-links ul {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-@media (prefers-color-scheme: dark) {
-  details.right-links ul {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  }
+html[data-theme="dark"] details.right-links ul {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 details.right-links li {
@@ -944,3 +938,40 @@ twitter-widget {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+
+/* ==========================================================================
+   Theme Toggle Button
+   ========================================================================== */
+
+#theme-toggle,
+#theme-toggle-mobile {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-navbar-text);
+  padding: 4px;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  opacity: 0.7;
+  border-radius: 4px;
+}
+
+#theme-toggle:hover,
+#theme-toggle-mobile:hover {
+  opacity: 1;
+}
+
+#theme-toggle svg,
+#theme-toggle-mobile svg {
+  width: 1.25em;
+  height: 1.25em;
+}
+
+html[data-theme="light"] #theme-toggle .icon-sun,
+html[data-theme="light"] #theme-toggle-mobile .icon-sun { display: none; }
+html[data-theme="dark"] #theme-toggle .icon-moon,
+html[data-theme="dark"] #theme-toggle-mobile .icon-moon { display: none; }

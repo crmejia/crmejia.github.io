@@ -5,6 +5,7 @@
 >
   <head>
     <meta charset="utf-8" />
+    <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);if(t==="dark")document.documentElement.style.colorScheme="dark"})()</script>
 
     {{ partial "meta.html" . }}
 

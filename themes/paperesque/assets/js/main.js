@@ -63,16 +63,40 @@
     })
   });
 
-  // theme-color meta tag updates based on navbar visibility
-  docReady(function(){
-    var nav=document.querySelector(".navbar nav");
+  // theme-color meta tag helpers
+  function updateThemeColorMeta(theme){
     var metaLight=document.querySelector('meta[name="theme-color"][data-tag=light]');
     var metaDark=document.querySelector('meta[name="theme-color"][data-tag=dark]');
-    var visible=true;
-    function update(){
-      if(visible){metaLight.setAttribute("content","#18181B");metaDark.setAttribute("content","#09090B")}
-      else{metaLight.setAttribute("content","#FFFFFF");metaDark.setAttribute("content","#09090B")}
+    if(theme==="dark"){
+      metaLight.setAttribute("content","#09090B");
+      metaDark.setAttribute("content","#09090B");
+    }else{
+      metaLight.setAttribute("content","#18181B");
+      metaDark.setAttribute("content","#09090B");
     }
-    new IntersectionObserver(function(entries){visible=entries[0].isIntersecting;update()},{root:null,rootMargin:"0px",threshold:[0]}).observe(nav)
+  }
+
+  // theme toggle
+  docReady(function(){
+    var btn=document.getElementById("theme-toggle");
+    btn.addEventListener("click",function(){
+      var current=document.documentElement.getAttribute("data-theme");
+      var next=current==="dark"?"light":"dark";
+      document.documentElement.setAttribute("data-theme",next);
+      document.documentElement.style.colorScheme=next==="dark"?"dark":"";
+      localStorage.setItem("theme",next);
+      updateThemeColorMeta(next);
+    });
+    // follow OS changes when user hasn't set an explicit preference
+    window.matchMedia("(prefers-color-scheme:dark)").addEventListener("change",function(e){
+      if(!localStorage.getItem("theme")){
+        var t=e.matches?"dark":"light";
+        document.documentElement.setAttribute("data-theme",t);
+        document.documentElement.style.colorScheme=t==="dark"?"dark":"";
+        updateThemeColorMeta(t);
+      }
+    });
+    // set initial meta theme-color
+    updateThemeColorMeta(document.documentElement.getAttribute("data-theme"));
   });
 }();
