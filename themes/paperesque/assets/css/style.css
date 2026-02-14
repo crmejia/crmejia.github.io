@@ -40,6 +40,8 @@
   /* Spacing */
   --content-width: 42rem;
   --content-padding: 1.25rem;
+  --content-width-lg: 56rem;
+  --content-width-xl: 64rem;
 }
 
 
@@ -926,6 +928,30 @@ twitter-widget {
 
   body.look-sheet-bkg {
     background-color: var(--color-bg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-container {
+    width: var(--content-width-lg);
+    max-width: var(--content-width-lg);
+  }
+
+  .content-container-narrow-pad {
+    width: var(--content-width-lg);
+    max-width: var(--content-width-lg);
+  }
+}
+
+@media (min-width: 1440px) {
+  .content-container {
+    width: var(--content-width-xl);
+    max-width: var(--content-width-xl);
+  }
+
+  .content-container-narrow-pad {
+    width: var(--content-width-xl);
+    max-width: var(--content-width-xl);
   }
 }
 
